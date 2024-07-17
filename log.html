@@ -21,7 +21,7 @@
   </header>
   <h1 style='letter-spacing: 5px;'>-Reddipic-</h1>
   <div style="display:flex;gap:10px;"id='masterdiv'>
-  <div class="login" id="e" style="margin-right:0px;">
+  <div class="login2" id="e" style="margin-right:0px;">
     
     <button class="button at" onclick="if (document.querySelector('.hide').style.display=='none'){document.querySelector('.hide').style.display='flex';document.querySelector('.th').style.display='none';}else{document.querySelector('.hide').style.display='none';document.querySelector('.th').style.display='block';}">Atmosphere</button>
     
@@ -371,7 +371,7 @@
       color: hsl(19, 100%, 71%) ;
     }
 
-    .login {
+    .login,.login2 {
 
       backdrop-filter: blur(3px);
       overflow: auto;
@@ -395,7 +395,7 @@
     }
 
 
-    .login:hover {
+    .login:hover,.login2:hover {
       box-shadow: 0px 0px 15px orange;
 
     }
@@ -454,8 +454,9 @@
         }
     }
     @media only screen and (max-width: 600px) {
-      .ffe,.heading2{
+      .ffe,.heading2,#e,.login2{
         display:none;
+        visibility: hidden;
     }
 
   </style>
