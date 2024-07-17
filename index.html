@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>image sourcer</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <a href="htm.html" id="1" class="navlink">Sign up</a>
+  
+    <a href="112.html" id="2" class="navlink">Login</a>
+  </nav>
+  <div class="login">
+    <h1 style="color:lightred;letter-spacing: 5px;">-Reddipic-</h1>
+    <p style="font-size:20px;padding-right:10px;padding-left:10px;">Take a cup of coffee, sit back and enjoy memes and other stuff. This website will retrieve images from given subreddits.
+    </p>
+    <button class="button" onclick="location.replace('log.html')">Take me to the website</button>
+    <button class="button"onclick='location.replace("https://github.com/that0therguy")'>Github</button>
+
+  </div>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    body {
+      user-select: none;
+      background-image: url(g.gif);
+      background-repeat: repeat-y;
+      background-size: 100%;
+      background-color: orange;
+      font-family: "poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      box-sizing: border-box;
+
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      /* Styles for screens with a maximum width of 600px */
+      body {
+        background-size: cover;
+        /* Adjust background image */
+      }
+
+    }
+
+    button {
+      font-size: 20px;
+      background-image: linear-gradient(to bottom right, rgb(252, 157, 113), rgb(255, 160, 52));
+      border-radius: 5px;
+      border: none;
+      padding: 5px;
+      margin:10px;
+      padding-left: 27px;
+      padding-right: 27px;
+      color: rgb(53, 10, 2);
+      box-shadow: 0px 0px 15px rgb(255, 94, 0);
+      transition: font-size 0.2s;
+    }
+
+    button:hover {
+      font-size: 22px;
+      
+    }
+
+
+
+    input {
+      background-image: linear-gradient(to bottom right, rgb(255, 227, 208), rgb(255, 218, 176));
+      box-shadow: 0px 0px 15px rgb(255, 94, 0);
+      font-weight: 550;
+      color: #ff5100;
+      border: none;
+      border-radius: 2px;
+      font-size: 16px;
+      text-align: center;
+      padding: 5px;
+      margin-bottom: 20px;
+      user-select: none;
+
+
+    }
+
+    input::after {
+      text-decoration: none;
+    }
+
+    input:focus {
+      outline: 2px solid rgb(255, 154, 95);
+    }
+
+    .login {
+      display: flex;
+      font-size: 29px;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(3px);
+      flex-direction: column;
+      background-image: linear-gradient(to bottom right, rgba(88, 28, 0, 0.6), rgba(0, 0, 0, 0.6));
+      border: none;
+
+      color: white;
+      box-shadow: 0px 0px 15px red;
+      width: 80%;
+      height: 20em;
+      margin: auto;
+      border-radius: 10px;
+      padding: 20px;
+      transition: box-shadow .2s;
+
+    }
+
+    @media only screen and (max-width: 600px) {
+      .login {
+        width: 300px;
+        height: 500px;
+        font-size: 20px;
+      }
+
+
+    }
+
+    .login:hover {
+      box-shadow: 0px 0px 15px orange;
+
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 60px;
+
+
+    }
+
+    .navlink {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 1.3em;
+      user-select: none;
+
+    }
+
+    .navlink:hover {
+      font-size: 1.31em;
+      transition: font-size .2s, color .5;
+    }
+  </style>
+
+
+
+  <script>
+    //function def() {
+    //  if (localStorage.getItem("login") == "true") {
+    //    location.replace("log.html")
+    //  }
+
+
+    //}
+    
+    
+    
+    document.getElementById("1").addEventListener("mouseover", () => {
+      document.getElementById("2").style = "color:rgb(255, 150, 150);transition:all .2s;";
+    })
+    document.getElementById("1").addEventListener("mouseout", () => {
+      document.getElementById("2").style = "color:white;transition:color .1s;";
+    })
+    document.getElementById("2").addEventListener("mouseover", () => {
+      document.getElementById("1").style = "color:rgb(255, 150, 150);transition:all .2s;";
+    })
+    document.getElementById("2").addEventListener("mouseout", () => {
+      document.getElementById("1").style = "color:white;transition:color .1s;";
+    })
+    localStorage.setItem("login", "false");
+  </script>
+
+
+</body>
+
+</html>
