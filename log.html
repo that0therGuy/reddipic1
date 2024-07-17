@@ -20,7 +20,7 @@
     </nav>
   </header>
   <h1 style='letter-spacing: 5px;'>-Reddipic-</h1>
-  <div style="display:flex;gap:10px;"id='masterdiv'>
+  <div id='masterdiv'>
   <div class="login2" id="e" style="margin-right:0px;">
     
     <button class="button at" onclick="if (document.querySelector('.hide').style.display=='none'){document.querySelector('.hide').style.display='flex';document.querySelector('.th').style.display='none';}else{document.querySelector('.hide').style.display='none';document.querySelector('.th').style.display='block';}">Atmosphere</button>
@@ -146,9 +146,9 @@
       margin-bottom:5px;
     }
     #masterdiv{
-
+      display:flex;
+      gap:10px;
     }
-
 
 
 
@@ -454,11 +454,10 @@
         }
     }
     @media only screen and (max-width: 600px) {
-      .ffe,.heading2,#e,.login2{
+
+      .ffe,.heading2,#e,.login2,#masterdiv{
         display:none;
-        visibility: hidden;
-        width:1px;
-        height:1px;
+             
     }
 
   </style>
