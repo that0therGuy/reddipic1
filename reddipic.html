@@ -1,4 +1,4 @@
-
+\
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Take a cup of coffee, sit back and enjoy memes and other stuff. This website will retrieve images from given subreddits">
   <meta name="keywords" content="reddit,image,scraper,cozy,fun">
-  <link rel="icon"  href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <title>Reddipic</title>
 </head>
 
@@ -18,7 +18,8 @@
       <!--<h3 class="mode">☀️</h3>-->
     </nav>
   </header>
-  <h1 style='letter-spacing: 5px;'>-Reddipic-</h1>
+  <div class="login5"><h1 style='letter-spacing: 5px;'>-Reddipic-</h1></div>
+  
   <div id='masterdiv'>
   <div class="login2" id="e" style="margin-right:0px;">
     
@@ -75,51 +76,79 @@
     
     
   </div>
+  
   <div class="ffe login3" id ='e' style='margin-left:0px;display:flex;gap:10px;padding:17px;'>
     <button class="button" id="backdrop">Backdrops</button>
     <p id="nameb" class="heading2 ffe" style="padding:0px;margin:0px;font-size:17px;">Autumn</p>
   </div>
   </div>
+  
   <div class="login">
-    
+    <div class="total-container">
+      <div class="total">
+        <input type="search" placeholder="Enter Subreddit" class="us">
       
-    <input type="search" placeholder="Enter Subreddit" class="us">
-    
-    <div class="fle">
-      <button class="button find">Find!</button> 
-      <button class="button rapid">Random Find!</button> 
-      
-      <button class="button ee" style='transition: all .4s;'onclick="      if (document.querySelector('.hide3').style.display=='none'){document.querySelector('.hide3').style.display='flex';document.querySelector('.ee').style.filter='sepia(100%)'}else{document.querySelector('.hide3').style.display='none';document.querySelector('.ee').style.filter='sepia(0%)'}">Image Filter</button>
-      <br>
-      <div class="hide3 filters">
+      <div class="fle">
+        <button class="button find">Find!</button> 
+        <button class="button rapid">Random Find!</button> 
         
-        <button class="buttonx grey" onclick="document.querySelector('.img').style.filter='initial';document.querySelector('.img').style.filter='grayscale(100%)';">greyscale</button>
-        <button class="buttonx inv" onclick="document.querySelector('.img').style.filter='invert(100%)'">invert</button>
-        <button class="buttonx blur" onclick="document.querySelector('.img').style.filter='blur(4px)'">blur</button>
-        <button class="buttonx sep" onclick="document.querySelector('.img').style.filter='sepia(100%)'">sepia</button>
-        <button class="buttonx satu" onclick="document.querySelector('.img').style.filter='saturate(7)'">saturate</button>
-        <button class="buttonx bri" onclick="document.querySelector('.img').style.filter='brightness(50%)'">dimmess</button>
-        <button class="buttonx contrast" onclick="document.querySelector('.img').style.filter='contrast(180%)'">contrast</button>
-        <button class="button no" onclick="document.querySelector('.img').style.filter='none'">None</button>
+        
+        
+  
       </div>
-      
-
+      </div>
+      <div class="login4">
+        
+        <button class="button download" onclick="downloadImage()">Original</button>
+        
+        <button class="button ee" style='transition: all .4s;'onclick="      if (document.querySelector('.hide3').style.display=='none'){document.querySelector('.hide3').style.display='flex';document.querySelector('.ee').style.filter='sepia(100%)'}else{document.querySelector('.hide3').style.display='none';document.querySelector('.ee').style.filter='sepia(0%)'}">Image Filter</button>
+        <br>
+        <div class="hide3 filters">
+          
+          <button class="buttonx grey" onclick="document.querySelector('.img').style.filter='initial';document.querySelector('.img').style.filter='grayscale(100%)';">greyscale</button>
+          <button class="buttonx inv" onclick="document.querySelector('.img').style.filter='invert(100%)'">invert</button>
+          <button class="buttonx blur" onclick="document.querySelector('.img').style.filter='blur(4px)'">blur</button>
+          <button class="buttonx sep" onclick="document.querySelector('.img').style.filter='sepia(100%)'">sepia</button>
+          <button class="buttonx satu" onclick="document.querySelector('.img').style.filter='saturate(7)'">saturate</button>
+          <button class="buttonx bri" onclick="document.querySelector('.img').style.filter='brightness(50%)'">dimmess</button>
+          <button class="buttonx contrast" onclick="document.querySelector('.img').style.filter='contrast(180%)'">contrast</button>
+          <button class="button no" onclick="document.querySelector('.img').style.filter='none'">None</button>
+        </div>
+      </div>
     </div>
+    
+    
+      
+    
     
 
     <h1 class="heading">title</h1>
     <h1 class="sub"></h1>
+    
     <img src=" baba1.jpg" alt="no subreddit found / please try again later" class="img" style="transition: filter .4s;">
-      <h1 class="author">author</h1><br>
-      <button class="button download" onclick="downloadImage()">Download</button>
+    
+    
+    <h1 class="author">author</h1><br>
+      
+    
+  
 
 
 
   </div>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    .ee,.download{
+      margin:5px;
+    }
     .th,.at,#backdrop{
       margin-left:10px;
+    }
+    .total{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
     }
     .hide{
       display:none;
@@ -127,6 +156,17 @@
       flex-direction:column;
 
       
+    }
+    .total-container{
+      display:flex;
+      flex-direction:row;
+    }
+    @media only screen and (max-width: 600px) {
+      .total-container{
+        display:flex;
+        flex-direction:column;
+      }
+
     }
 
     .hide2{
@@ -164,8 +204,7 @@
       padding:0px;
       margin:0px;
       box-sizing: border-box;
-      
-      
+          
 
     } 
     @media only screen and (max-width: 600px) {
@@ -190,11 +229,11 @@
     }
 
     h1 {
-      color: rgb(255, 224, 206);
+      color: rgb(255, 252, 233);
       text-align: center;
       font-size: 65px;
       font-family:'poppins';
-      text-shadow:0px 0px 30px rgb(0, 0, 0);
+      text-shadow:0px 0px 50px rgb(255, 255, 255);
       
     }
     .author{
@@ -348,7 +387,7 @@
       font-weight: 550;
       color: #ff5100;
       border: none;
-      border-radius: 2px;
+      border-radius: 4px;
       font-size: 20px;
       text-align: center;
       padding: 7px;
@@ -372,7 +411,7 @@
       color: hsl(19, 100%, 71%) ;
     }
 
-    .login,.login2,.login3 {
+    .login,.login2,.login3,.login4,.login5 {
 
       backdrop-filter: blur(3px);
       overflow: auto;
@@ -393,6 +432,22 @@
       padding: 20px;
       transition: box-shadow .2s;
       overflow-x:hidden;
+      transition:all .5s;
+    }
+    .login5{
+      background-image: linear-gradient(to bottom right, rgba(70, 0, 0, 0.6), rgba(8, 0, 0, 0.6));
+      padding:0px;
+      padding-right:20%;
+      padding-left:20%;
+      margin-bottom:2.1%;
+      backdrop-filter: blur(2px);
+      box-shadow:none;
+      width:fit-content;
+    }
+    .login4{
+      min-height:fit-content;
+      margin:10px;
+      transition:all .5s;
     }
 
 
