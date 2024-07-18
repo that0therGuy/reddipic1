@@ -160,6 +160,7 @@
     .total-container{
       display:flex;
       flex-direction:row;
+      gap:1em;
     }
     @media only screen and (max-width: 600px) {
       .total-container{
@@ -566,6 +567,7 @@
         document.querySelector('.login').style.boxShadow='0px 0px 10px pink';
         document.querySelector('.login3').style.boxShadow='0px 0px 10px pink';
         document.querySelector('.login2').style.boxShadow='0px 0px 10px pink';
+        document.querySelector('.login4').style.boxShadow='0px 0px 10px pink';
         document.querySelector('img').style.boxShadow='0px 0px 10px pink';
         
       }
@@ -576,6 +578,7 @@
         document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
         document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
         document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('.login4').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
         document.querySelector('img').style.boxShadow='0px 0px 15px rgb(255, 123, 0)';
 
         document.querySelector('.login').addEventListener('mouseover',()=>{
@@ -626,7 +629,7 @@
       var h = window.innerHeight; 
 
       if (w < 600){
-        console.log('hi')
+        
         document.querySelector('.hideo').classList.remove('login5');
       }else{
         document.querySelector('.hideo').classList.add('login5');
