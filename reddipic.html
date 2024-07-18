@@ -102,7 +102,7 @@
         <button class="button download" onclick="downloadImage()">Original</button>
         
           <button class="button ee">Image Filters</button>
-          <p class="heading2 wee" style="margin:0px;font-size:17px;padding:0px; ">-</p>
+          <p class="heading22 wee" style="margin:0px;font-size:17px;padding:0px; ">-</p>
           <!--<button class="button ee" style='transition: all .4s;'onclick="      if (document.querySelector('.hide3').style.display=='none'){document.querySelector('.hide3').style.display='flex';document.querySelector('.ee').style.filter='sepia(100%)'}else{document.querySelector('.hide3').style.display='none';document.querySelector('.ee').style.filter='sepia(0%)'}">Image Filter</button>
         <br>
         <div class="hide3 filters">
@@ -259,7 +259,7 @@
       }
     }
 
-    .heading,.heading2 {
+    .heading,.heading2,.heading22 {
       color: yellow;
       font-size: 25px;
       margin-bottom: 0px;
@@ -449,12 +449,14 @@
       backdrop-filter: blur(2px);
       box-shadow:none;
       width:fit-content;
+      
     }
 
     .login4{
       min-height:fit-content;
       margin:10px;
       transition:all .5s;
+      
     }
 
 
@@ -563,9 +565,11 @@
  
       }
       if(pass2==4){
+        document.querySelector('.img').style.transition='filter 1s'
         document.querySelector('.img').style.filter='initial';
         document.querySelector('.img').style.filter='saturate(7)';
         document.querySelector('.wee').innerHTML='Saturate'
+        
  
       }
       if(pass2==5){
