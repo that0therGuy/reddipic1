@@ -97,11 +97,13 @@
   
       </div>
       </div>
-      <div class="login4">
+      <div class="login4" style="padding-bottom:5px;">
         
         <button class="button download" onclick="downloadImage()">Original</button>
         
-        <button class="button ee" style='transition: all .4s;'onclick="      if (document.querySelector('.hide3').style.display=='none'){document.querySelector('.hide3').style.display='flex';document.querySelector('.ee').style.filter='sepia(100%)'}else{document.querySelector('.hide3').style.display='none';document.querySelector('.ee').style.filter='sepia(0%)'}">Image Filter</button>
+          <button class="button ee">Image Filters</button>
+          <p class="heading2 wee" style="margin:0px;font-size:17px;padding:0px; ">-</p>
+          <!--<button class="button ee" style='transition: all .4s;'onclick="      if (document.querySelector('.hide3').style.display=='none'){document.querySelector('.hide3').style.display='flex';document.querySelector('.ee').style.filter='sepia(100%)'}else{document.querySelector('.hide3').style.display='none';document.querySelector('.ee').style.filter='sepia(0%)'}">Image Filter</button>
         <br>
         <div class="hide3 filters">
           
@@ -113,7 +115,9 @@
           <button class="buttonx bri" onclick="document.querySelector('.img').style.filter='brightness(50%)'">dimmess</button>
           <button class="buttonx contrast" onclick="document.querySelector('.img').style.filter='contrast(180%)'">contrast</button>
           <button class="button no" onclick="document.querySelector('.img').style.filter='none'">None</button>
-        </div>
+        </div>-->
+        
+        
       </div>
     </div>
     
@@ -523,6 +527,66 @@
   
   <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
   <script>
+    let pass2=0
+    document.querySelector('.ee').addEventListener('click',()=>{
+      
+    
+      if (pass2==7){
+        pass2=0
+      }else{
+        pass2++
+        
+      }
+
+
+      if(pass2==0){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='grayscale(100%)';
+        document.querySelector('.wee').innerHTML='Greyscale'
+      }
+      if(pass2==1){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='invert(100%)';
+        document.querySelector('.wee').innerHTML='Invert'
+ 
+      }
+      if(pass2==2){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='blur(4px)';
+        document.querySelector('.wee').innerHTML='Blur'
+ 
+      }
+      if(pass2==3){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='sepia(100%)';
+        document.querySelector('.wee').innerHTML='Sepia'
+ 
+      }
+      if(pass2==4){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='saturate(7)';
+        document.querySelector('.wee').innerHTML='Saturate'
+ 
+      }
+      if(pass2==5){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='brightness(50%)';
+        document.querySelector('.wee').innerHTML='Brightness'
+ 
+      }
+      if(pass2==6){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='contrast(180%)';
+        document.querySelector('.wee').innerHTML='Contrast'
+      }
+      if(pass2==7){
+        document.querySelector('.img').style.filter='initial';
+        document.querySelector('.img').style.filter='none';
+        document.querySelector('.wee').innerHTML='-'
+ 
+      }
+
+    })
     let meme = function(e){
       if (!e) {
         document.querySelector(".img").setAttribute("src","baba.jpg")
@@ -545,6 +609,10 @@
       
 
     }
+    
+
+    
+
     let pass=0
     document.querySelector('#backdrop').addEventListener('click',()=>{
       
@@ -656,6 +724,10 @@
       
 
     })
+
+
+
+
     let subredditlist= ['memes','dankmemes','memes_irl','anime','aww','animal','funny','gaming','humour','art','sports','cat','space','god','food','webdev']
     document.querySelector(".rapid").addEventListener("click", () => {
       let rsub=subredditlist[Math.floor(Math.random() * 15)]
