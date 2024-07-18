@@ -76,7 +76,7 @@
     
     
   </div>
-  <div class="ffe login" id ='e' style='margin-left:0px;display:flex;gap:10px;padding:17px;'>
+  <div class="ffe login3" id ='e' style='margin-left:0px;display:flex;gap:10px;padding:17px;'>
     <button class="button" id="backdrop">Backdrops</button>
     <p id="nameb" class="heading2 ffe" style="padding:0px;margin:0px;font-size:17px;">Autumn</p>
   </div>
@@ -99,7 +99,7 @@
         <button class="buttonx blur" onclick="document.querySelector('.img').style.filter='blur(4px)'">blur</button>
         <button class="buttonx sep" onclick="document.querySelector('.img').style.filter='sepia(100%)'">sepia</button>
         <button class="buttonx satu" onclick="document.querySelector('.img').style.filter='saturate(7)'">saturate</button>
-        <button class="buttonx bri" onclick="document.querySelector('.img').style.filter='brightness(50%)'">dimness</button>
+        <button class="buttonx bri" onclick="document.querySelector('.img').style.filter='brightness(50%)'">dimmess</button>
         <button class="buttonx contrast" onclick="document.querySelector('.img').style.filter='contrast(180%)'">contrast</button>
         <button class="button no" onclick="document.querySelector('.img').style.filter='none'">None</button>
       </div>
@@ -230,14 +230,16 @@
       height: 60%;
       /* Allow the image to take 100% height of its container */
       object-fit: cover;
-      box-shadow: 0px 0px 15px yellow;
+      box-shadow: 0px 0px 15px rgb(255, 123, 0);
       margin: 50px;
       resize:both;
       overflow: none;
       transition: transform .2s;
+      border-radius:10px;
       
       
     }
+
     @media only screen and (max-width: 600px) {
         img{
             width: 80%;
@@ -371,7 +373,7 @@
       color: hsl(19, 100%, 71%) ;
     }
 
-    .login,.login2 {
+    .login,.login2,.login3 {
 
       backdrop-filter: blur(3px);
       overflow: auto;
@@ -395,8 +397,8 @@
     }
 
 
-    .login:hover,.login2:hover {
-      box-shadow: 0px 0px 15px orange;
+    .login:hover,.login2:hover,.login3:hover {
+      box-shadow: 0px 0px 15px rgb(255, 120, 31);
 
     }
     .mode{
@@ -488,8 +490,8 @@
     }
     let pass=0
     document.querySelector('#backdrop').addEventListener('click',()=>{
-      console.log('hi')
-      if(pass==6){
+      
+      if(pass==8){
         pass=0
       }else{
         pass++
@@ -503,27 +505,76 @@
         document.querySelector('#nameb').innerHTML='Synthwave'
       }
       if(pass==2){
-        document.body.style.backgroundImage='url(spiral.jpg)';
-        document.querySelector('#nameb').innerHTML='Trees'
+        document.body.style.backgroundImage='url(synth3.gif)';
+        document.querySelector('#nameb').innerHTML='Synthwave 2'
+        document.querySelector('.login').style.boxShadow='0px 0px 10px pink';
+        document.querySelector('.login3').style.boxShadow='0px 0px 10px pink';
+        document.querySelector('.login2').style.boxShadow='0px 0px 10px pink';
+        document.querySelector('img').style.boxShadow='0px 0px 10px pink';
         
       }
       if(pass==3){
+        document.body.style.backgroundImage='url(spiral.jpg)';
+        document.querySelector('#nameb').innerHTML='Trees'
+        
+        document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('img').style.boxShadow='0px 0px 15px rgb(255, 123, 0)';
+
+        document.querySelector('.login').addEventListener('mouseover',()=>{
+          document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+        })
+        document.querySelector('.login3').addEventListener('mouseover',()=>{
+          document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+        })
+        document.querySelector('.login2').addEventListener('mouseover',()=>{
+          document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+        })
+        document.querySelector('.login').addEventListener('mouseout',()=>{
+          document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        })
+        document.querySelector('.login3').addEventListener('mouseout',()=>{
+          document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        })
+        document.querySelector('.login2').addEventListener('mouseout',()=>{
+          document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        })
+      }
+      if(pass==4){
+        document.body.style.backgroundImage='url(stars.gif)';
+        document.querySelector('#nameb').innerHTML='Stars'
+        
+      }
+      if(pass==5){
         document.body.style.backgroundImage='url(city.jpg)';
         document.querySelector('#nameb').innerHTML='City'
       }
-      if(pass==4){
+      if(pass==6){
         document.body.style.backgroundImage='url(sun.jpg)';
         document.querySelector('#nameb').innerHTML='Desert'
       }
-      if(pass==5){
+      if(pass==7){
         document.body.style.backgroundImage='url(gradient.jpg)';
         document.querySelector('#nameb').innerHTML='Orange'
       }
-      if(pass==6){
+      if(pass==8){
         document.body.style.backgroundImage='url(gradient2.jpg)';
         document.querySelector('#nameb').innerHTML='Orange 2'
       }
+      
     })
+    function doit(){
+      document.querySelector('.login').addEventListener('onmouseover',()=>{
+        document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+      })
+      document.querySelector('.login3').addEventListener('onmouseover',()=>{
+        document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+      })
+      document.querySelector('.login2').addEventListener('onmouseover',()=>{
+        document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+      })
+    }
 
     document.querySelector(".find").addEventListener("click", () => {
       
@@ -744,3 +795,5 @@
 </body>
 
 </html>
+
+
