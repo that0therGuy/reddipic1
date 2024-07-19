@@ -621,7 +621,7 @@
     let pass=0
     document.querySelector('#backdrop').addEventListener('click',()=>{
       
-      if(pass==8){
+      if(pass==10){
         pass=0
       }else{
         pass++
@@ -747,6 +747,14 @@
       if(pass==8){
         document.body.style.backgroundImage='url(gradient2.jpg)';
         document.querySelector('#nameb').innerHTML='Orange 2'
+      }
+      if(pass==9){
+        document.body.style.backgroundImage='url(xp.jpg)';
+        document.querySelector('#nameb').innerHTML='XP'
+      }
+      if(pass==10){
+        document.body.style.backgroundImage='url(image2.png)';
+        document.querySelector('#nameb').innerHTML='Vaporwave'
       }
       
     })
