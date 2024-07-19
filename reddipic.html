@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+<!--make a loading gif choice set-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,8 +99,8 @@
       </div>
       <div class="login4" style="padding-bottom:5px;">
         
-        <button class="button download" onclick="downloadImage()">Original Post</button>
-        
+             
+          <button class="button download" onclick="downloadImage()">Original Post</button>
           <button class="button ee">Image Filters</button>
           <p class="heading22 wee" style="margin:0px;font-size:17px;padding:0px; ">-</p>
           <!--<button class="button ee" style='transition: all .4s;'onclick="      if (document.querySelector('.hide3').style.display=='none'){document.querySelector('.hide3').style.display='flex';document.querySelector('.ee').style.filter='sepia(100%)'}else{document.querySelector('.hide3').style.display='none';document.querySelector('.ee').style.filter='sepia(0%)'}">Image Filter</button>
@@ -636,7 +636,7 @@
       }
       if(pass==2){
         document.body.style.backgroundImage='url(synth3.gif)';
-        document.querySelector('#nameb').innerHTML='Synthwave 2'
+        document.querySelector('#nameb').innerHTML='Sunset'
         document.querySelector('.login').style.boxShadow='0px 0px 10px pink';
         document.querySelector('.login3').style.boxShadow='0px 0px 10px pink';
         document.querySelector('.login2').style.boxShadow='0px 0px 10px pink';
@@ -676,7 +676,36 @@
       if(pass==4){
         document.body.style.backgroundImage='url(stars.gif)';
         document.querySelector('#nameb').innerHTML='Stars'
-        
+        document.querySelector('.login5').style.backgroundImage='linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(8, 0, 60, 0.6))';
+        document.querySelector('.login').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        document.querySelector('.login3').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        document.querySelector('.login2').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        document.querySelector('.login4').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        document.querySelector('img').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        document.querySelector('.login').style.background=' rgba(0, 0, 10, 0.6)';
+        document.querySelector('.login3').style.background=' rgba0, 0, 10, 0.6)';
+        document.querySelector('.login2').style.background=' rgba(0, 0, 10, 0.6)';
+        document.querySelector('.login4').style.background='rgba(0, 0, 10, 0.6)';
+        document.querySelector('img').style.background='rgba(0, 0, 10, 0.6)';
+
+        document.querySelector('.login').addEventListener('mouseover',()=>{
+          document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(8,0,90)';
+        })
+        document.querySelector('.login3').addEventListener('mouseover',()=>{
+          document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(8,0,90)';
+        })
+        document.querySelector('.login2').addEventListener('mouseover',()=>{
+          document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(8,0,90)';
+        })
+        document.querySelector('.login').addEventListener('mouseout',()=>{
+          document.querySelector('.login').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        })
+        document.querySelector('.login3').addEventListener('mouseout',()=>{
+          document.querySelector('.login3').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        })
+        document.querySelector('.login2').addEventListener('mouseout',()=>{
+          document.querySelector('.login2').style.boxShadow='0px 0px 15px rgba(8, 0, 60, 0.6)';
+        })
       }
       if(pass==5){
         document.body.style.backgroundImage='url(city.jpg)';
