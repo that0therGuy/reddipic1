@@ -710,6 +710,31 @@
       if(pass==5){
         document.body.style.backgroundImage='url(city.jpg)';
         document.querySelector('#nameb').innerHTML='City'
+        document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('.login4').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        document.querySelector('.login5').style.backgroundImage='linear-gradient(to bottom right, rgba(70, 0, 0, 0.6), rgba(8, 0, 0, 0.6))';
+        document.querySelector('img').style.boxShadow='0px 0px 15px rgb(255, 123, 0)';
+
+        document.querySelector('.login').addEventListener('mouseover',()=>{
+          document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+        })
+        document.querySelector('.login3').addEventListener('mouseover',()=>{
+          document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+        })
+        document.querySelector('.login2').addEventListener('mouseover',()=>{
+          document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(255, 120, 31)';
+        })
+        document.querySelector('.login').addEventListener('mouseout',()=>{
+          document.querySelector('.login').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        })
+        document.querySelector('.login3').addEventListener('mouseout',()=>{
+          document.querySelector('.login3').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        })
+        document.querySelector('.login2').addEventListener('mouseout',()=>{
+          document.querySelector('.login2').style.boxShadow='0px 0px 15px rgb(233, 55, 1)';
+        })
       }
       if(pass==6){
         document.body.style.backgroundImage='url(sun.jpg)';
